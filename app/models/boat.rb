@@ -29,8 +29,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.with_three_classifications
-    binding.pry
-    self.joins(:classifications)
+    self.joins(:classifications).where(:classifications => {:boat_id => 'boat.id'}).count
   end
 
 end
