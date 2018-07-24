@@ -3,7 +3,7 @@ class Captain < ActiveRecord::Base
 
   def self.catamaran_operators
     binding.pry
-    self.includes(:classifications)
+    self.includes(boats: :classifications)
   end
 
 end
