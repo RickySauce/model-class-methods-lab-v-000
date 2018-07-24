@@ -5,8 +5,7 @@ class Boat < ActiveRecord::Base
 
 
   def self.first_five
-    binding.pry
-    self.find_by(name:).limit(5)
+    self.limit(5)
   end
 
 end
