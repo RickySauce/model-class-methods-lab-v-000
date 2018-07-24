@@ -25,7 +25,6 @@ class Boat < ActiveRecord::Base
   end
 
   def self.sailboats
-    binding.pry
     self.includes(:classifications).where(:classifications => {:name => "Sailboat"})
   end
 
