@@ -9,8 +9,12 @@ class Captain < ActiveRecord::Base
     self.includes(boats: :classifications).where(:classifications => {:name => "Sailboat"}).distinct
   end
 
+  def self.motorboaters
+    self.includes(boats: :classifications).where(:classifications => {:name => "Motorboat"}).distinct
+  end
+
   def self.talented_seafarers
-    self.includes(boats: :classifications).where(:classifications => {:name => "Sailboat"}).where(:classifications => {:name => "Motorboat"})
+    self.where('id in (?)', self.sailors.pluck(:id))
   end
 
 
