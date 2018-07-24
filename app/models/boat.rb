@@ -5,6 +5,7 @@ class Boat < ActiveRecord::Base
 
 
   def self.first_five
+    binding.pry
   end
 
 end
