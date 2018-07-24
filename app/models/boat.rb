@@ -5,7 +5,7 @@ class Boat < ActiveRecord::Base
 
 
   def self.first_five
-    self.pluck[0..5]
+    self.all[0..5]
   end
 
 end
