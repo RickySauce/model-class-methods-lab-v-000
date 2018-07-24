@@ -6,7 +6,7 @@ class Boat < ActiveRecord::Base
 
   def self.first_five
     binding.pry
-    self.find((1..5).to_a)
+    self.find_by_(:name, limit: 5)
   end
 
 end
