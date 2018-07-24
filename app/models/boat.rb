@@ -5,6 +5,7 @@ class Boat < ActiveRecord::Base
 
 
   def self.first_five
+    self.pluck[0..5]
     binding.pry
   end
 
