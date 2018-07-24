@@ -8,4 +8,8 @@ class Boat < ActiveRecord::Base
     self.limit(5)
   end
 
+  def self.dinghy
+    self.where(length: > 20)
+  end
+
 end
