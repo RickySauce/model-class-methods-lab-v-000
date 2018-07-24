@@ -5,7 +5,7 @@ class Boat < ActiveRecord::Base
 
 
   def self.first_five
-    self.all[0..5]
+    return self.all[0..5]
   end
 
 end
