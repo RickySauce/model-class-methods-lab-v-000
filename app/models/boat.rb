@@ -9,7 +9,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.dinghy
-    self.where("length > ?", 20)
+    self.where("length < ?", 20)
     binding.pry
   end
 
