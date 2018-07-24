@@ -4,7 +4,7 @@ class Boat < ActiveRecord::Base
   has_many    :classifications, through: :boat_classifications
 
   def self.first_five
-    self.pluck[0..5](:name)
+    self.pluck(:name)[0..5]
   end
 
 end
