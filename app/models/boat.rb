@@ -29,7 +29,8 @@ class Boat < ActiveRecord::Base
   end
 
   def self.with_three_classifications
-    self.joins(:classifications).group('boat.id').having('count(boat_id) > 3')
+    binding.pry
+    self.joins(:classifications)
   end
 
 end
