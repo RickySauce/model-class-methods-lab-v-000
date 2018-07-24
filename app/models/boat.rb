@@ -5,7 +5,7 @@ class Boat < ActiveRecord::Base
 
 
   def self.first_five
-    self.find([1..5])
+    self.where(id: 1..5)
   end
 
 end
