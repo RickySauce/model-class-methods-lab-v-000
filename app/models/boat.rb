@@ -30,7 +30,7 @@ class Boat < ActiveRecord::Base
 
   def self.with_three_classifications
     binding.pry
-    self.includes(:classifications).where(self.classifications.count > 3)
+    self.joins(:classifications).group('boat.id').having('count(boat_id) > 3')
   end
 
 end
