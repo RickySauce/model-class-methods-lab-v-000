@@ -24,4 +24,7 @@ class Boat < ActiveRecord::Base
     self.where(captain_id: nil)
   end
 
+  def self.sailboats
+  end
+
 end
