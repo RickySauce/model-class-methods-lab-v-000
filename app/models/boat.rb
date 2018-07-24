@@ -29,6 +29,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.with_three_classifications
+    binding.pry
     self.where('classifications_count > ?', 3)
   end
 
